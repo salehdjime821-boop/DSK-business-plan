@@ -8,4 +8,4 @@ export default function Home() {
       <p>🌍 Bonjour! Ceci est la page d'accueil.</p>
     </div>
   );
-} 
+}
