@@ -37,6 +37,7 @@ export default function Home() {
       <p style={{ fontSize: "1.2rem", marginBottom: "2rem" }}>
         {content[lang].subtitle}
       </p>
+
       <button
         onClick={() => alert("🚀 Bientôt disponible !")}
         style={{
@@ -45,13 +46,13 @@ export default function Home() {
           fontWeight: "bold",
           border: "none",
           borderRadius: "8px",
-          background: "#fff",
-          color: "#0070f3",
+          background: "#0070f3",
+          color: "#fff",
           cursor: "pointer",
-          transition: "0.3s",
+          transition: "all 0.3s ease",
         }}
-        onMouseOver={(e) => (e.target.style.background = "#e0e0e0")}
-        onMouseOut={(e) => (e.target.style.background = "#fff")}
+        onMouseOver={(e) => (e.target.style.background = "#eaeaea")}
+        onMouseOut={(e) => (e.target.style.background = "#0070f3")}
       >
         {content[lang].button}
       </button>
@@ -60,7 +61,7 @@ export default function Home() {
         <button
           onClick={() => setLang("fr")}
           style={{
-            margin: "0 5px",
+            margin: "5px",
             padding: "8px 16px",
             borderRadius: "6px",
             border: "none",
@@ -74,7 +75,7 @@ export default function Home() {
         <button
           onClick={() => setLang("en")}
           style={{
-            margin: "0 5px",
+            margin: "5px",
             padding: "8px 16px",
             borderRadius: "6px",
             border: "none",
