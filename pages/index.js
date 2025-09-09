@@ -17,25 +17,27 @@ export default function Home() {
   };
 
   return (
-    <div style={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      height: "100vh",
-      background: "linear-gradient(to right, #4facfe, #00f2fe)",
-      color: "#fff",
-      fontFamily: "Arial, sans-serif",
-      textAlign: "center",
-      padding: "20px"
-    }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100vh",
+        background: "linear-gradient(to right, #4facfe, #00f2fe)",
+        color: "#fff",
+        fontFamily: "Arial, sans-serif",
+        textAlign: "center",
+        padding: "20px",
+      }}
+    >
       <h1 style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>
         {content[lang].title}
       </h1>
       <p style={{ fontSize: "1.2rem", marginBottom: "2rem" }}>
         {content[lang].subtitle}
       </p>
-      <button 
+      <button
         onClick={() => alert("🚀 Bientôt disponible !")}
         style={{
           padding: "12px 24px",
@@ -46,16 +48,16 @@ export default function Home() {
           background: "#fff",
           color: "#0070f3",
           cursor: "pointer",
-          transition: "0.3s"
+          transition: "0.3s",
         }}
-        onMouseOver={e => e.target.style.background = "#e0e0e0"}
-        onMouseOut={e => e.target.style.background = "#fff"}
+        onMouseOver={(e) => (e.target.style.background = "#e0e0e0")}
+        onMouseOut={(e) => (e.target.style.background = "#fff")}
       >
         {content[lang].button}
       </button>
 
       <div style={{ marginTop: "2rem" }}>
-        <button 
+        <button
           onClick={() => setLang("fr")}
           style={{
             margin: "0 5px",
@@ -64,12 +66,12 @@ export default function Home() {
             border: "none",
             cursor: "pointer",
             background: lang === "fr" ? "#0070f3" : "#fff",
-            color: lang === "fr" ? "#fff" : "#0070f3"
+            color: lang === "fr" ? "#fff" : "#0070f3",
           }}
         >
           FR
         </button>
-        <button 
+        <button
           onClick={() => setLang("en")}
           style={{
             margin: "0 5px",
@@ -78,7 +80,7 @@ export default function Home() {
             border: "none",
             cursor: "pointer",
             background: lang === "en" ? "#0070f3" : "#fff",
-            color: lang === "en" ? "#fff" : "#0070f3"
+            color: lang === "en" ? "#fff" : "#0070f3",
           }}
         >
           EN
@@ -86,4 +88,4 @@ export default function Home() {
       </div>
     </div>
   );
-} 
+}
